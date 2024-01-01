@@ -21,26 +21,28 @@ const Home = () => {
 
 	return (
 		<div className="flex flex-col space-y-8 p-2 max-w-xl mx-auto min-h-screen justify-center">
-			<h1 className="text-center text-5xl font-bold text-secondary">
-				QR<span className="text-stone-800">gen</span>
-			</h1>
+			<h1 className="text-center text-5xl font-bold text-[#3662E3]">QRgen</h1>
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
 					handleRedirect();
 				}}
-				className="flex gap-2 bg-neutral-800 focus-within:ring ring-neutral-300 rounded p-2"
+				className="flex gap-2 bg-[#080b13] focus-within:ring ring-[#3662E3] rounded-xl p-2"
 			>
 				<Input
 					value={input}
 					onChange={handleInput}
 					placeholder="https://noahpittman.xyz"
-					className="bg-neutral-800 border-none placeholder:text-neutral-400/50 text-neutral-100 focus-visible:ring-0 focus-visible:ring-offset-0"
+					className="bg-[#080b13] border-none placeholder:text-[#3662E3]/40 text-[#3662E3] focus-visible:ring-0 focus-visible:ring-offset-0"
 					type="url"
 					required
 				/>
 
-				<Button type="submit" variant={"secondary"}>
+				<Button
+					type="submit"
+					className="rounded-xl bg-[#3662E3] text-white hover:bg-[#3557b3]"
+					variant={"secondary"}
+				>
 					QR Code
 				</Button>
 			</form>

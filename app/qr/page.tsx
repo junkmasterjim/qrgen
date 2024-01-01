@@ -54,22 +54,27 @@ const QR = () => {
 
 	return (
 		<div className="flex flex-col space-y-8 p-2 max-w-xl mx-auto min-h-screen justify-center items-center">
-			<h1 className="text-center text-5xl font-bold text-secondary">
-				QR<span className="text-stone-800">gen</span>
-			</h1>
+			<h1 className="text-center text-5xl font-bold text-[#3662E3]">QRgen</h1>
 			{url && (
 				<div className="p-4 rounded-lg bg-white">
 					<QRCode id="qr" size={352} className="" value={url || ""} />
 				</div>
 			)}
 			<div className="flex gap-4 justify-center w-full">
-				<Button onClick={handleDownload} variant={"secondary"}>
+				<Button
+					className="rounded-xl bg-[#3662E3] text-white hover:bg-[#3557b3]"
+					onClick={handleDownload}
+					variant={"secondary"}
+				>
 					<Download className="h-4 w-4 mr-2" />
 					Download
 				</Button>
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
-						<Button variant={"secondary"}>
+						<Button
+							className="rounded-xl bg-[#3662E3] text-white hover:bg-[#3557b3]"
+							variant={"secondary"}
+						>
 							<Share className="h-4 w-4 mr-2" />
 							Share
 						</Button>
