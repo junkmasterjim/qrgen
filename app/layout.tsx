@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 const poppins = Poppins({
 	subsets: ["devanagari"],
@@ -8,9 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "QRgen - Generate QR codes",
-	description:
-		"Generate QR codes for any URL with QRgen. It's free and open source.",
+	title: "QR | npitt.dev",
+	description: "Generate QR codes for any URL. 100% free and instant.",
 };
 
 export default function RootLayout({
@@ -20,10 +20,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body
-				className={`${poppins.className} min-h-screen overflow-hidden bg-[#111729]`}
-			>
-				{children}
+			<body className={`${poppins.className} min-h-screen overflow-hidden`}>
+				<Suspense>{children}</Suspense>
 			</body>
 		</html>
 	);
