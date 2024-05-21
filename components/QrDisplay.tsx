@@ -48,7 +48,7 @@ const QRDisplay = (params: { params: string }) => {
 
 	return (
 		<>
-			<div className="p-4 opacity90 rounded-lg border border-border/25 shadow-sm bg-white w-96 h-96">
+			<div className="p-4 opacity90 rounded-lg border border-border/25 shadow-md bg-white w-96 h-96">
 				<QRCode id="qr" className="h-full w-full" value={params.params || ""} />
 			</div>
 			<div className="flex gap-4 justify-center w-full">
