@@ -90,7 +90,7 @@ const Home = () => {
 				>
 					<QRDisplay params={params} />
 					<p className="text-center text-xs text-muted-foreground">
-						Made with ❤️ by{" "}
+						Made with 🥩 by{" "}
 						<Link
 							className="border-b hover:text-foreground hover:border-foreground transition-colors"
 							target="_blank"
